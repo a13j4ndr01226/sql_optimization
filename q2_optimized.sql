@@ -13,7 +13,8 @@ CREATE TEMP TABLE inproceedings_v2 AS
 	WHERE (trim(lower(ip.booktitle)) like '%vldb%'
 				or trim(lower(ip.booktitle)) like '%sigmod%');
 
-Explain Analyze
+-- Explain Analyze
+
 WITH unnest_authors as 
 ( 
 	SELECT
@@ -42,4 +43,3 @@ having count(case when type_ like 'VLDB' then title end) >= 10
 	and count(case when type_ like 'SIGMOD' then title end) >= 10
 
 order by 1;
-
