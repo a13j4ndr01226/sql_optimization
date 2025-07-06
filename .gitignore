@@ -3,3 +3,7 @@ import_csv_to_table.sql
 dblp.dtd
 dblp.xml
 dblp.xml.gz
+dataset/author.csv
+dataset/article.csv
+dataset/inproceedings.csv
+dataset/publications.csv
